@@ -1,8 +1,25 @@
-# NestedTech Public Org Profile
+# NestedTech Org Public Profile
 
-This repository contains minimal public-facing organization profile and documentation.
+This repository hosts public organization-level documentation for **NestedTech**.
 
+## Purpose
+- Present a concise public profile
+- Document safe contribution and support paths
+- Provide security disclosure guidance
+- Maintain a high-level public repo index
+
+## Public Links
 - Website: https://nestedtech.net
-- API entrypoint: https://api.nestedtech.net/api/discovery
+- API Discovery: https://api.nestedtech.net/api/discovery
+- Contact: https://nestedtech.net/contact
 
-No internal architecture, credentials, or private operational details should be stored here.
+## Scope Boundary
+This repo is intentionally high-level. It does **not** include private architecture, infrastructure internals, credentials, or proprietary research implementation details.
+
+See also:
+- `profile/README.md`
+- `docs/public-overview.md`
+- `docs/repo-index.md`
+- `SECURITY.md`
+- `CONTRIBUTING.md`
+- `SUPPORT.md`

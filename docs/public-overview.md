@@ -1,15 +1,22 @@
 # Public Overview
 
-This documentation is intentionally minimal.
+## Audience
+This documentation is for collaborators, reviewers, and community members who need to understand NestedTech at a high level.
 
-## What We Share Publicly
-- Mission-level project summaries
-- Public endpoints and contact links
-- Responsible disclosure path
+## What Is Public
+- Organization mission and contact paths
+- Public web properties and API discovery endpoints
+- Security disclosure process and reporting expectations
+- High-level repository index and role labels
 
-## What Stays Private
-- Infrastructure and server topology
-- Research internals and proprietary methods
-- Deployment runbooks and credentials
+## What Is Not Public
+- Internal infrastructure topology and server maps
+- Proprietary model internals, private benchmarks, and runbooks
+- Credentials, keys, tokens, or environment-specific secrets
 
-For collaboration inquiries, use https://nestedtech.net/contact.
+## Documentation Principles
+- Keep public documentation concise and accurate
+- Separate policy documentation from implementation details
+- Prefer linking public endpoints over exposing internals
+
+For project inquiries and collaboration requests: https://nestedtech.net/contact
