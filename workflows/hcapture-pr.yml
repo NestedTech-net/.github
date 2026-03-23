@@ -1,0 +1,47 @@
+name: HCapture PR Gates
+
+on:
+  pull_request:
+    paths:
+      - "hcapture-backend/**"
+      - "hcapture-tests/**"
+      - "hcapture-solver/**"
+      - "hcapture-perception/**"
+      - ".github/workflows/hcapture-pr.yml"
+
+jobs:
+  backend-build:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: hcapture-backend
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+          cache-dependency-path: hcapture-backend/package-lock.json
+      - run: npm ci
+      - run: npm run typecheck
+      - run: npm run build
+      - run: npm run security:audit
+
+  tests-layers:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: hcapture-tests
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+          cache-dependency-path: hcapture-tests/package-lock.json
+      - run: npm ci
+      - run: npm run typecheck
+      - run: npm run test:unit
+      - run: npm run test:contract
+      - run: npm run test:integration
+
